@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Torres | Portafolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        
+        .floating-action {
+            animation: bounce-slight 2s infinite ease-in-out;
+        }
+        
+        @keyframes bounce-slight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .cert-card {
+            transition: all 0.3s ease;
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-color: #2563eb;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', /* Slate 900 - Ultra professional */
+                        secondary: '#2563eb', /* Blue 600 - Corporate accent */
+                        accent: '#e2e8f0', /* Slate 200 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-gray-800 flex flex-col min-h-screen relative">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fa-solid fa-laptop-code text-secondary text-2xl mr-3"></i>
+                    <span class="font-bold text-xl text-primary tracking-wide">Gustavo<span class="text-secondary">Torres</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#perfil" class="text-gray-600 hover:text-secondary px-3 py-2 text-sm font-medium transition">Perfil</a>
+                    <a href="#habilidades" class="text-gray-600 hover:text-secondary px-3 py-2 text-sm font-medium transition">Habilidades</a>
+                    <a href="#certificados" class="text-gray-600 hover:text-secondary px-3 py-2 text-sm font-medium transition">Certificados</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-secondary px-3 py-2 text-sm font-medium transition">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Presentación Profesional (Sin foto, centrado y elegante) -->
+    <section id="perfil" class="hero-gradient text-white py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-blue-600 opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-cyan-500 opacity-20 blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="bg-blue-900/50 text-blue-200 border border-blue-700/50 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 inline-block">Administración Bancaria & Soporte IT</span>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Gustavo Antonio <br><span class="text-blue-400">Torres Márquez</span></h1>
+            
+            <h2 class="text-xl md:text-2xl text-slate-300 mb-8 font-light">Especialista en Control Financiero y Sistemas Tecnológicos</h2>
+            
+            <p class="text-slate-200 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+                Comprometido con la eficiencia operativa. Cuento con formación en <strong class="text-white">Administración Bancaria en Certus</strong> y experiencia en el <strong class="text-white">mantenimiento y soporte de sistemas informáticos</strong>. Mi vocación combina el rigor financiero con la agilidad técnica, listo para aportar valor a empresas líderes.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="assets/CV_Gustavo_Torres.pdf" target="_blank" download="CV_Gustavo_Torres.pdf" class="bg-secondary hover:bg-blue-500 text-white font-semibold py-3.5 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center w-full sm:w-auto">
+                    <i class="fa-solid fa-file-pdf mr-2"></i> Descargar CV
+                </a>
+                <a href="#certificados" class="bg-transparent border border-slate-400 hover:bg-white hover:text-primary text-white font-semibold py-3.5 px-8 rounded-full transition flex items-center justify-center w-full sm:w-auto">
+                    Ver Certificados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades y Servicios -->
+    <section id="habilidades" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl font-bold text-primary mb-4">Competencias Profesionales</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded"></div>
+                <p class="mt-4 text-slate-500 max-w-2xl mx-auto">Una fusión ideal entre el área administrativa financiera y el dominio de herramientas tecnológicas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Habilidad 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Soporte Técnico IT</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Diagnóstico, configuración y mantenimiento de equipos. Solución rápida de problemas técnicos para asegurar la continuidad.</p>
+                </div>
+                <!-- Habilidad 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-cash-register"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Sistemas POS y Caja</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Facilidad innata para el dominio de sistemas de caja, ERP logísticos y facturación electrónica.</p>
+                </div>
+                <!-- Habilidad 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Control Financiero</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Conocimientos sólidos en manejo de efectivo, medios de pago, conceptos de cuadre de caja e inventarios básicos.</p>
+                </div>
+                <!-- Habilidad 4 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Ética y Responsabilidad</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Certificado en programas de integridad corporativa, toma de decisiones éticas y pensamiento crítico aplicados al entorno laboral.</p>
+                </div>
+                <!-- Habilidad 5 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Trabajo bajo Presión</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gestión de emociones, autocontrol y organización eficiente para atender altos volúmenes de clientes sin perder la calidad.</p>
+                </div>
+                <!-- Habilidad 6 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Atención al Cliente</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Comunicación efectiva y trato amable para garantizar la mejor experiencia de servicio a usuarios finales y corporativos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificados -->
+    <section id="certificados" class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Respaldos y Certificaciones</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded"></div>
+                <p class="mt-4 text-slate-500 max-w-2xl mx-auto">Haz clic en cualquier certificado para visualizarlo o descargarlo en PDF original.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert 1 (Fintech) -->
+                <a href="assets/Certificado_Ecosistema_Fintech.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Conociendo el Ecosistema Fintech</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS • Nov 2022</p>
+                            <p class="text-sm text-slate-500">Nuevas iniciativas y modelos de negocios del Sistema Financiero.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 2 (Transformación Digital) -->
+                <a href="assets/Certificado_Transformacion_Digital.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Transformación Digital de la Banca</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS • Mayo 2022</p>
+                            <p class="text-sm text-slate-500">Programa de especialización sobre la digitalización bancaria (16 hrs).</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 3 (Educación Financiera 1) -->
+                <a href="assets/Certificado_Educacion_Financiera.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Educación Financiera (2022)</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS & Mibanco • Jul 2022</p>
+                            <p class="text-sm text-slate-500">Enfoque en la sostenibilidad e inclusión financiera.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Cert 4 (Educación Financiera 2) -->
+                <a href="assets/Certificado_Educacion_Financiera_2023.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Educación Financiera (2023)</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS & Mibanco • Nov 2023</p>
+                            <p class="text-sm text-slate-500">Conocimientos en finanzas personales y toma de decisiones.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 5 (Presupuesto y Ahorro BCP) -->
+                <a href="assets/Certificado_Presupuesto_Ahorro_BCP.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Presupuesto y Ahorro</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">ABC del BCP • Sep 2022</p>
+                            <p class="text-sm text-slate-500">Curso culminado del campus de Educación Financiera BCP.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 6 (Productos y Canales Digitales BCP) -->
+                <a href="assets/Certificado_Productos_Canales_Digitales_BCP.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Productos y Canales Digitales</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">ABC del BCP • Sep 2022</p>
+                            <p class="text-sm text-slate-500">Curso sobre la gestión y uso de canales digitales del BCP.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 7 (Innovación en el ahorro - Prima AFP) -->
+                <a href="assets/Certificado_Innovacion_Ahorro_PrimaAFP.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Innovación en el Ahorro</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">Prima AFP • Sep 2022</p>
+                            <p class="text-sm text-slate-500">Taller sobre estrategias de ahorro organizado por Prima AFP.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 8 (Tarjeta de Crédito) -->
+                <a href="assets/Certificado_Tarjeta_Credito_Sin_Secretos.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Tarjeta de Crédito Sin Secretos</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS • Jul 2024</p>
+                            <p class="text-sm text-slate-500">Taller práctico sobre la gestión y funcionamiento de tarjetas.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cert 9 (Excel Básico) -->
+                <a href="assets/Certificado_Office_Excel_Basico.pdf" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm cert-card border-t-4 border-secondary hover:bg-blue-50 group">
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 text-secondary flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-800">Office Nivel Básico - Excel</h3>
+                            <p class="text-sm font-semibold text-secondary mb-2">CERTUS • May 2022</p>
+                            <p class="text-sm text-slate-500">Taller de habilidades ofimáticas esenciales en Excel.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-secondary transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botones de Contacto Integrados -->
+    <section id="contacto" class="py-16 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-8">¿Buscas un perfil proactivo y eficiente? Contáctame.</h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                
+                <a href="https://wa.me/51904852996?text=Hola%20Gustavo,%20he%20visto%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" class="w-full sm:w-auto flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <a href="mailto:gustavoantoniotorresmarquez1@gmail.com" class="w-full sm:w-auto flex items-center justify-center bg-primary hover:bg-slate-800 text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition">
+                    <i class="fa-solid fa-envelope text-xl mr-3"></i>
+                    <span>Correo</span>
+                </a>
+
+                <a href="tel:+51904852996" class="w-full sm:w-auto flex items-center justify-center bg-secondary hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition">
+                    <i class="fa-solid fa-phone-volume text-xl mr-3"></i>
+                    <span>Llamadas</span>
+                </a>
+            </div>
+            
+            <p class="text-sm text-slate-500 mb-10"><i class="fa-solid fa-location-dot mr-1"></i> Residente en Motupe - Lambayeque, Perú. Con disponibilidad inmediata.</p>
+        </div>
+    </section>
+
+    <!-- Footer Developer -->
+    <footer class="bg-primary text-slate-400 py-8 text-center mt-auto border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center justify-center">
+            <div class="text-sm">
+                &copy; 2024 Gustavo Torres Márquez. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de Contacto (WhatsApp) -->
+    <a href="https://wa.me/51904852996?text=Hola%20Gustavo,%20he%20visto%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" title="Contáctame" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white shadow-2xl p-4 rounded-full flex items-center justify-center transition transform hover:-translate-y-1 hover:scale-110 floating-action">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="hidden md:inline-block ml-2 font-bold pr-2">Contáctame</span>
+    </a>
+
+</body>
+</html>
